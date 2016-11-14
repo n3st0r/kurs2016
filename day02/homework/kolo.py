@@ -5,7 +5,7 @@ Pi = 3.14
 def licz_obwod(r: float) -> float:
     """
     Funkcja liczy promień koła
-    :param r: promień koła, niezbędny do wyliczenia obwodu
+    :param r: promień koła
     :return: float
     """
 
@@ -17,7 +17,7 @@ def licz_pole_kola(r: float) -> float:
     """
     Funkcja liczy pole koła
 
-    :param r:
+    :param r: promień koła
     :return: float
     """
 
