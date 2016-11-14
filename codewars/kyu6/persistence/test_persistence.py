@@ -1,5 +1,4 @@
-import pytest
-import codewars.persistence.persistence as p
+import codewars.kyu6.persistence.persistence as p
 
 
 def test_persistence():
