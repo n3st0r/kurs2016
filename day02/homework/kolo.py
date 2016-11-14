@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 import math
-Pi = 3.14
 
 
 def licz_obwod(r: float, dokladnosc: int=2) -> float:

@@ -2,12 +2,12 @@ import day02.homework.kolo as kolo
 
 
 liczba = input('Podaj liczbę: ')
-l = [1, 2]
+lista = [1, 2]
 k = (1, 2)
 
 try:
     liczba = int(liczba)
-    wynik = l[liczba]
+    wynik = lista[liczba]
 except ValueError:
     print('Nie podałeś liczby!')
 except IndexError:
