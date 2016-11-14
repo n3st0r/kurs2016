@@ -2,12 +2,12 @@
 def persistence(n: int) -> int:
     i = 0
 
-    def int_to_list(m):
-        lista = []
-        for n in str(m):
-            if n.isdigit():
-                lista.append(int(n))
-        return lista
+    # def int_to_list(m):
+    #     lista = []
+    #     for n in str(m):
+    #         if n.isdigit():
+    #             lista.append(int(n))
+    #     return lista
 
     def multiplication(lista: list):
 
@@ -22,7 +22,9 @@ def persistence(n: int) -> int:
 
     while len(str(n)) > 1:
         i += 1
-        n = multiplication(int_to_list(n))
+        lista = [int(x) for x in str(n)]
+        n = multiplication(lista)
+        # n = multiplication(int_to_list(n))
 
     return i
 
