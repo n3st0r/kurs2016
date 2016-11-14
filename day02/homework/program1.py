@@ -8,7 +8,7 @@ def pr(text, dlugosc=12) -> str:
 
 
 for i in range(21):
-    obwod = pr(round(p.licz_obwod(i), 2))
-    pole = pr(round(p.licz_pole_kola(i), 2))
+    obwod = pr(p.licz_obwod(i))
+    pole = pr(p.licz_pole_kola(i))
     promien = pr(i)
     print('promień: ', promien, '; obwód: ', obwod,  '; pole: ', pole)
