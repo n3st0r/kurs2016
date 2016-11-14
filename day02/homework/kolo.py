@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+import math
 Pi = 3.14
 
 
@@ -9,7 +10,7 @@ def licz_obwod(r: float) -> float:
     :return: float
     """
 
-    obwod = 2 * Pi * r
+    obwod = 2 * math.pi * r
     return obwod
 
 
@@ -21,5 +22,5 @@ def licz_pole_kola(r: float) -> float:
     :return: float
     """
 
-    pole = Pi * (r**2)
+    pole = math.pi * (r**2)
     return pole
