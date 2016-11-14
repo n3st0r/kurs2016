@@ -6,8 +6,9 @@ def pr(text, dlugosc=12) -> str:
     wynik = str(text).rjust(dlugosc, ' ')
     return wynik
 
+print('Rozpoczynam wyliczenia:')
 
-for i in range(21):
+for i in range(1, 21):
     obwod = pr(p.licz_obwod(i))
     pole = pr(p.licz_pole_kola(i))
     promien = pr(i)
