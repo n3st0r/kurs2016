@@ -1,25 +1,15 @@
 #!/usr/bin/env python
 
 
-def podaj_liczbe(komunikat):
-    dana = input(komunikat)
-    return float(dana)
+plik = 'test.txt'
 
+file = open(plik, 'r', encoding='UTF')
+zawartosc = file.readlines()
+# print(zawartosc)
 
-def podaj_boki():
-    a = podaj_liczbe('Podaj długość boku A: ')
-    b = podaj_liczbe('Podaj długość boku B: ')
-    return a, b
+for index,linia in enumerate(zawartosc):
+    print (index, ': ', linia, ' a jej dlugość: ', len(linia))
 
-if __name__ == '__main__':
-    print('Komunikta')
-    try:
-        boka, bokb = podaj_boki()
-    except ValueError as e:
-        print('Podałeś złe dane. Kończę program!!!')
-        print('LOG:: ', e)
-    else:
-        pole = boka * bokb
-        print('Pole prostokąta wynosi: ', pole)
-        if boka == bokb:
-            print('Podany prostokąt jest kwadratem!')
+# with open(plik, 'r') as infile:
+#     for line in infile:
+#         print(line)
