@@ -32,6 +32,6 @@ if __name__ == '__main__':
     bok a: 1, bok b: 2, pole:2
     """
     plik = 'wyniki.txt'
-    zawartosc = open(plik, 'r+')
-    zawartosc.write('bok a: %s, bok b: %s, pole: %s, %s' % (str(boka), str(bokb), str(pole), message))
+    zawartosc = open(plik, 'a')
+    zawartosc.write('bok a: %s, bok b: %s, pole: %s, %s\n' % (boka, str(bokb), str(pole), message))
 
