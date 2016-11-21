@@ -1,8 +1,9 @@
+print('Początek pliku')
 
 class Samochod:
 
     def __init__(self):
-        pass
+        print('Miejsce inicjalizacji samochodu')
 
     def przejedz(self, predkosc):
         czas = 30
@@ -12,6 +13,10 @@ class Samochod:
 
 
 if __name__ == '__main__':
+    print("przed")
     bmw1 = Samochod()
+    print('Po')
+
     droga = bmw1.przejedz(10)
     print(droga)
+
