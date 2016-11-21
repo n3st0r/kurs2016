@@ -1,0 +1,4 @@
+Parametr do konstruktora obiektu, określajacy jego spalanie.
+Ustawić "spalone paliwo" na 0
+
+Przy kazdym przejechaniu zmien wartość paliwa spalonego na spalanie * przejechana odległość.
