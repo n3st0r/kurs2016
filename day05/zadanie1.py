@@ -1,8 +1,10 @@
+import sys
+
 
 class Samochod:
 
-    def __init__(self, v_max):
-        self.v_max = v_max
+    def __init__(self, max):
+        self.v_max = max
         self.przebieg = 0
 
     def przejedz(self, predkosc):
@@ -11,6 +13,8 @@ class Samochod:
         else:
             czas = 30
             self.przebieg += predkosc * czas
+            print(self.przebieg)
+            sys.exit()
 
     def poka_przebieg(self):
         print(self.przebieg)
