@@ -10,6 +10,10 @@ class Samochod:
         print('Przejechałem: ', trasa, 'z prekdoscią', predkosc )
         return trasa
 
+    def __str__(self):
+        return 'To jest samochód'
+
+
 if __name__ == '__main__':
     bmw1 = Samochod()
     bmw1.marka()
