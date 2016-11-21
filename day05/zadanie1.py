@@ -1,4 +1,3 @@
-import sys
 
 
 class Samochod:
@@ -13,16 +12,17 @@ class Samochod:
         else:
             czas = 30
             self.przebieg += predkosc * czas
-            print(self.przebieg)
-            sys.exit()
 
     def poka_przebieg(self):
         print(self.przebieg)
 
+    def __str__(self):
+        wynik = 'Maksymalna prędkość: %s, Przebieg samochodu: %s' % (self.v_max, self.przebieg)
+        return wynik
 
 if __name__ == '__main__':
     bmw = Samochod(200)
     bmw.przejedz(150)
     bmw.poka_przebieg()
 
-    bmw.przejedz(250)
+    print(bmw)
