@@ -7,3 +7,6 @@ lista.append('a')
 a = lista.append('b')
 
 print(a)
+
+b = 'napis'
+print(b.upper())
