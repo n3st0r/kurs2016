@@ -1,0 +1,3 @@
+
+class Samochod:
+    pass
