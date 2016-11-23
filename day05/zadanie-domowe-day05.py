@@ -1,5 +1,5 @@
 
-class Rectangle:
+class Prostokat:
 
     def __init__(self, a, b):
         self._a = a
@@ -43,13 +43,14 @@ class Rectangle:
 if __name__ == '__main__':
     print('Testy programu')
 
-    prostokat = Rectangle(1, 2)
+    prostokat = Prostokat(1, 2)
+    print('Test metody __str__:', prostokat)
     boki = prostokat.boki()
     print('Weryfikacja typu zwracanej wartości:', type(boki))
     print(prostokat.opis())
 
-    prostokat2 = Rectangle(2, 4)
+    prostokat2 = Prostokat(2, 4)
     print(prostokat2.opis())
 
-    kwadrat = Rectangle(4, 4)
+    kwadrat = Prostokat(4, 4)
     print(kwadrat.opis())
