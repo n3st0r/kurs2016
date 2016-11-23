@@ -6,7 +6,6 @@ class Rectangle:
         self._b = b
 
     def __str__(self):
-        # tekst = "Prostokąt - bok a: %s, bok b: %s" % (self._a, self._b)
         if self.czy_kwadrat():
             return "Kwadrat, boki a = b = %s" % self._a
         else:
@@ -29,22 +28,28 @@ class Rectangle:
     def boki(self):
         return self._a, self._b
 
+    def opis(self):
+        pole = self.pole_prostokata()
+        obwod = self.obwod_prostokata()
+
+        if self.czy_kwadrat():
+            kwadrat = 'Tak'
+        else:
+            kwadrat = 'Nie'
+        tekst = "Prostokąt - bok a: %s, bok b: %s, pole: %s, obód: %s, czy kwadrat: %s" %\
+                (self._a, self._b, pole, obwod, kwadrat)
+        return tekst
+
 if __name__ == '__main__':
     print('Testy programu')
 
     prostokat = Rectangle(1, 2)
-    pole = prostokat.pole_prostokata()
-    obwod = prostokat.obwod_prostokata()
     boki = prostokat.boki()
-    print(type(boki))
-    print(prostokat, 'Pole:', pole, 'Obwód: ', obwod)
+    print('Weryfikacja typu zwracanej wartości:', type(boki))
+    print(prostokat.opis())
 
     prostokat2 = Rectangle(2, 4)
-    pole = prostokat2.pole_prostokata()
-    obwod = prostokat2.obwod_prostokata()
-    print(prostokat2, 'Pole:', pole, 'Obwód: ', obwod)
+    print(prostokat2.opis())
 
     kwadrat = Rectangle(4, 4)
-    pole = kwadrat.pole_prostokata()
-    obwod = kwadrat.obwod_prostokata()
-    print(kwadrat, 'Pole:', pole, 'Obwód: ', obwod)
+    print(kwadrat.opis())
