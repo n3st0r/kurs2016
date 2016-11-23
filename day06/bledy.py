@@ -2,7 +2,7 @@
 class KotDomowy:
     def jedz(selfself,pokarm):
         if pokarm != 'mysz':
-            raise Exception('Jadam tylko myszy')
+            raise ValueError('Jadam tylko myszy')
         print('mniam mniam')
 
 if __name__ == '__main__':
@@ -12,5 +12,5 @@ if __name__ == '__main__':
     k2 = KotDomowy()
     try:
         k2.jedz('Whiskas')
-    except Exception:
+    except ValueError:
         print('Nie zjadł whiskas, nic dziwnego')
