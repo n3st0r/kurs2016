@@ -8,14 +8,14 @@ class Samochod:
         self.przebieg = 0
         self.spalone_paliwo = 0
 
-
     def przejedz(self, predkosc):
         if predkosc > self.v_max:
             print("BŁĄD")
         else:
             czas = 30
-            self.przebieg += predkosc * czas
-            self.spalone_paliwo = self.przebieg * self.spalanie
+            trasa = predkosc * czas
+            self.przebieg += trasa
+            self.spalone_paliwo += self.spalanie * trasa
 
     def poka_przebieg(self):
         print(self.przebieg)
