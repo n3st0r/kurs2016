@@ -12,15 +12,24 @@ class Rectangle:
         pole = self._a * self._b
         return pole
 
+    def obwod_prostokata(self):
+        obwod = 2 * self._a + 2 * self._b
+        return obwod
 
 if __name__ == '__main__':
     print('Testy programu')
 
     prostokat = Rectangle(1, 2)
-    print(prostokat, 'Pole: ', prostokat.pole_prostokata())
+    pole = prostokat.pole_prostokata()
+    obwod = prostokat.obwod_prostokata()
+    print(prostokat, 'Pole:', pole, 'Obwód: ', obwod)
 
     prostokat2 = Rectangle(2, 4)
-    print(prostokat2, 'Pole: ', prostokat2.pole_prostokata())
+    pole = prostokat2.pole_prostokata()
+    obwod = prostokat2.obwod_prostokata()
+    print(prostokat2, 'Pole:', pole, 'Obwód: ', obwod)
 
     kwadrat = Rectangle(4, 4)
-    print(kwadrat, 'Pole: ', kwadrat.pole_prostokata())
+    pole = kwadrat.pole_prostokata()
+    obwod = kwadrat.obwod_prostokata()
+    print(kwadrat, 'Pole:', pole, 'Obwód: ', obwod)
