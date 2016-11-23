@@ -19,8 +19,14 @@ class KotDomowy(Zwierze):
     def machaj_ogonem(self):
         print('macha ogonem')
 
+    def jedz(self, pokarm):
+        print('Jestem wybredny')
+        super().jedz(pokarm=pokarm)
+
+
 class Waz(Zwierze):
     pass
+
 
 def nakarm(cos):
     cos.jedz('pajęczyny')
