@@ -26,6 +26,8 @@ class Rectangle:
         else:
             return False
 
+    def boki(self):
+        return self._a, self._b
 
 if __name__ == '__main__':
     print('Testy programu')
@@ -33,6 +35,8 @@ if __name__ == '__main__':
     prostokat = Rectangle(1, 2)
     pole = prostokat.pole_prostokata()
     obwod = prostokat.obwod_prostokata()
+    boki = prostokat.boki()
+    print(type(boki))
     print(prostokat, 'Pole:', pole, 'Obwód: ', obwod)
 
     prostokat2 = Rectangle(2, 4)
