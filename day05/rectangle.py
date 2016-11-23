@@ -6,7 +6,11 @@ class Rectangle:
         self._b = b
 
     def __str__(self):
-        return "Prostokąt - bok a: %s, bok b: %s" % (self._a, self._b)
+        # tekst = "Prostokąt - bok a: %s, bok b: %s" % (self._a, self._b)
+        if self.czy_kwadrat():
+            return "Kwadrat, boki a = b = %s" % self._a
+        else:
+            return "Prostokąt - bok a: %s, bok b: %s" % (self._a, self._b)
 
     def pole_prostokata(self):
         pole = self._a * self._b
@@ -15,6 +19,13 @@ class Rectangle:
     def obwod_prostokata(self):
         obwod = 2 * self._a + 2 * self._b
         return obwod
+
+    def czy_kwadrat(self):
+        if self._a == self._b:
+            return True
+        else:
+            return False
+
 
 if __name__ == '__main__':
     print('Testy programu')
