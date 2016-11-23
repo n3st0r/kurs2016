@@ -1,8 +1,11 @@
+class NiedobraKarma(Exception):
+    pass
+
 
 class KotDomowy:
     def jedz(self,pokarm):
         if pokarm != 'mysz':
-            raise ValueError('Jadam tylko myszy')
+            raise NiedobraKarma('Jadam tylko myszy')
         print('mniam mniam')
 
 if __name__ == '__main__':
@@ -12,5 +15,5 @@ if __name__ == '__main__':
     k2 = KotDomowy()
     try:
         k2.jedz('Whiskas')
-    except ValueError:
+    except NiedobraKarma:
         print('Nie zjadł whiskas, nic dziwnego')
